@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #1E1E22;
+      
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Animation for horizontal lines */
+    .line {
+      transform-origin: 120px 60px; 
+      transform: scaleX(0);
+      transition: transform 1s ease-in-out;
+    }
+    .animate .line {
+      transform: scaleX(1);
+    }
+
+    p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    }
+
+    /* Animation for bar chart */
+    .bar {
+      transform-origin: 120px 220px;
+      transform: scaleY(0);
+      transition: transform 1s ease-in-out;
+    }
+    .animate .bar {
+      transform: scaleY(1);
+    }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Navigation Bar -->
+  <nav class="flex justify-between items-center p-4 fixed top-0 left-0 w-full z-50" style="background-color: #242224;">
+    <div class="flex items-center">
+      <!-- Logo -->
+      <a href="#home" class="hover:text-green-400 flex items-center">
+        <img src="assets/images/logo-white.png" alt="Prism Dashboards Logo" class="h-12 mr-2">
+        <span class="text-2xl font-bold">Prism Dashboards</span>
+      </a>
+    </div>
+    <div class="flex space-x-6 font-bold">
+      <a href="#home" class="hover:text-green-400">Home</a>
+      <a href="#about" class="hover:text-green-400">About us</a>
+      <a href="#examples" class="hover:text-green-400">Products</a>
+      <a href="#contact" class="hover:text-green-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-[900px] flex items-center justify-between px-12">
+    <div>
+      <h1 class="text-7xl font-bold mb-6">Helping Businesses</h1>
+      <h1 class="text-7xl font-bold mb-6">Turn Data Into Dollars</h1>
+      <div class="flex space-x-4">
+        <a href="#about" class="hover:text-green-400">
+          <button class="px-6 py-2 rounded-lg font-bold" style="background-color: #73F190; color: #1E1E22;">Learn more</button>
+        </a>
+        <a href="#contact" class="hover:text-green-400">
+          <button class="px-6 py-2 rounded-lg font-bold" style="background-color: #FFFFFF; color: #1E1E22;">Contact us</button>
+        </a>
+      </div>      
+    </div>
+    <div>
+      <svg
+        id="animated-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        width="800"
+        height="500"
+        viewBox="0 0 400 250"
+      >
+        <!-- Full Background -->
+        <rect x="0" y="0" width="400" height="250" fill="#FFFFFF" rx="10"/>
+
+        <!-- Header -->
+        <rect x="0" y="0" width="400" height="40" fill="#3B974E" rx="10" />
+
+        <rect x="20" y="60" width="80" height="40" fill="#3B974E" rx="10" />
+        <rect x="20" y="120" width="80" height="40" fill="#73F190" rx="10" />
+        <rect x="20" y="180" width="80" height="40" fill="#3B974E" rx="10" />
+
+        <!-- Right Text Area -->
+        <g>
+          <rect x="120" y="60" width="260" height="40" rx="10" fill="#73F190" />
+          <rect x="130" y="67" width="100" height="6" rx="3" fill="#3B974E" class="line" />
+          <rect x="130" y="77" width="150" height="6" rx="3" fill="#3B974E" class="line" />
+          <rect x="130" y="87" width="175" height="6" rx="3" fill="#3B974E" class="line" />
+        </g>
+
+        <!-- Bar Chart -->
+        <g>
+          <rect x="120" y="120" width="260" height="100" fill="#1E1E22" rx="10" />
+          <rect x="140" y="170" width="10" height="30" fill="#73F190" rx="2" class="bar" />
+          <rect x="152" y="160" width="10" height="40" fill="#3B974E" rx="2" class="bar" />
+
+          <rect x="170" y="155" width="10" height="45" fill="#73F190" rx="2" class="bar" />
+          <rect x="182" y="165" width="10" height="35" fill="#3B974E" rx="2" class="bar" />
+
+          <rect x="200" y="160" width="10" height="40" fill="#73F190" rx="2" class="bar" />
+          <rect x="212" y="150" width="10" height="50" fill="#3B974E" rx="2" class="bar" />
+
+          <rect x="230" y="165" width="10" height="35" fill="#73F190" rx="2" class="bar" />
+          <rect x="242" y="180" width="10" height="20" fill="#3B974E" rx="2" class="bar" />
+
+          <rect x="260" y="190" width="10" height="10" fill="#73F190" rx="2" class="bar" />
+          <rect x="272" y="170" width="10" height="30" fill="#3B974E" rx="2" class="bar" />
+
+          <rect x="290" y="150" width="10" height="50" fill="#73F190" rx="2" class="bar" />
+          <rect x="302" y="155" width="10" height="45" fill="#3B974E" rx="2" class="bar" />
+        </g>
+      </svg>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("animated-svg").classList.add("animate");
+    });
+  </script>
+<!-- About Us Section -->
+<section id="about" class="h-[1800px] px-12 py-12">
+  <h2 class="text-4xl font-bold mb-8 text-center">About Us</h2>
+  <div class="space-y-12">
+    <div>
+      <h3 class="text-2xl font-semibold">Step 1: Initial Consultation</h3>
+      <p>Not sure if Prism Dashboards is a right fit for your business?</p>
+      <p>We provide consultations at no cost.</p>
+    </div>
+    <div>
+      <h3 class="text-2xl font-semibold">Step 2: Securely Collect/Organize Your Data</h3>
+      <p>Whether it’s in a database, CSV, or Excel format, we take your information and securely prepare it for transformation.</p>
+    </div>
+    <div>
+      <h3 class="text-2xl font-semibold">Step 3: Transform From Data to Interactive Dashboards</h3>
+      <p>Our team works with yours to design intuitive dashboards, bringing your metrics to life with clear insights.</p>
+    </div>
+    <div>
+      <h3 class="text-2xl font-semibold">Step 4: Take Control of Your Data</h3>
+      <p>Once your dashboard is ready, it’s all yours! Access it anywhere, share it with your team, and make data-driven decisions confidently.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Examples Section -->
+<section id="examples" class="h-[900px] px-12 py-12">
+  <h2 class="text-4xl font-bold mb-8 text-center">Business Dashboard Examples</h2>
+  <ul class="space-y-4">
+    <li class="relative">
+      <div class="flex items-center space-x-2">
+        <span>Financial Dashboards</span>
+        <button class="toggle-btn flex items-center" onclick="toggleDropdown(event)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-content hidden text-gray-300 ml-6">Test</div>
+    </li>
+    <li class="relative">
+      <div class="flex items-center space-x-2">
+        <span>Project Management Dashboards</span>
+        <button class="toggle-btn flex items-center" onclick="toggleDropdown(event)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-content hidden text-gray-300 ml-6">Test</div>
+    </li>
+    <li class="relative">
+      <div class="flex items-center space-x-2">
+        <span>Marketing Dashboards</span>
+        <button class="toggle-btn flex items-center" onclick="toggleDropdown(event)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-content hidden text-gray-300 ml-6">Test</div>
+    </li>
+    <!-- Add other list items similarly -->
+  </ul>
+</section>
+
+<script>
+  function toggleDropdown(event) {
+    // Close any currently open dropdowns
+    document.querySelectorAll(".dropdown-content").forEach(content => {
+      if (!content.classList.contains("hidden")) {
+        content.classList.add("hidden");
+      }
+    });
+
+    // Open the clicked dropdown
+    const dropdown = event.target.closest("button").parentElement.nextElementSibling;
+    dropdown.classList.toggle("hidden");
+  }
+</script>
+
+
+<!-- Contact Us Section -->
+<section id="contact" class="h-[900px] px-12 py-12">
+  <h2 class="text-4xl font-bold mb-8 text-center">Contact Us!</h2>
+  <div class="flex justify-between">
+      <form id="contact-form" class="space-y-6">
+        <input id="email" type="email" name="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <input id="name" type="text" name="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <input id="company" type="text" name="company" placeholder="Company" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <textarea id="projectDetails" name="projectDetails" placeholder="Tell us about your project!" class="w-full h-32 px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required></textarea>
+        <button type="submit" class="px-6 py-2 rounded-lg" style="background-color: #73F190; color: #1E1E22;">Submit</button>
+    </form>
+    <div class="text-lg">
+      <p>At Prism Dashboards, we recognize each business has its own unique set of needs. The more information you share with us, the better we can cater to your needs!</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('nav a, a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      // Calculate offset to account for the fixed nav bar
+      const yOffset = -document.querySelector('nav').offsetHeight; 
+      const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      // Scroll to the element with offset
+      window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth',
+      });
+    });
+  });
+</script>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("name").value;
+      const company = document.getElementById("company").value;
+      const projectDetails = document.getElementById("projectDetails").value;
+      const formspreeEndpoint = "https://formspree.io/f/mzzzdyqn";
+      try {
+          const response = await fetch(formspreeEndpoint, {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, name, company, projectDetails }),
+          });
+
+          if (response.ok) {
+              alert("Your message has been sent successfully!");
+              document.getElementById("contact-form").reset();
+          } else {
+              alert("There was an issue sending your message. Please try again.");
+          }
+      } catch (error) {
+          console.error("Error:", error);
+          alert("Error sending your message. Please try again.");
+      }
+  });
+</script>
+</body>
+</html>
