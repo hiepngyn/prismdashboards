@@ -66,18 +66,18 @@
       </a>
     </div>
     <div class="flex space-x-6 font-bold">
-      <a href="#home" class="hover:text-green-400">Home</a>
-      <a href="#our-process" class="hover:text-green-400">Our Process</a>
+      <a href="#why-us" class="hover:text-green-400">Why Us?</a>
       <a href="#examples" class="hover:text-green-400">Products</a>
+      <a href="#faq" class="hover:text-green-400">FAQ</a>
       <a href="#contact" class="hover:text-green-400">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="h-[900px] flex items-center justify-between px-12">
-    <div>
+  <section id="home" class="h-screen flex items-center justify-between px-12" style="background: linear-gradient(to right, #dce35b, #73F190);">
+    <div class="w-3/5 flex flex-col justify-center">
       <h1 class="text-7xl font-bold mb-6"> We make boring data into, </h1>
-      <h1 class="text-7xl font-bold mb-6 text-green-400">
+      <h1 class="text-7xl font-bold mb-6">
         <div id="rotating-words" class="rotating-words">intuative dashboards.</div>
       </h1>
       <div class="flex space-x-4">
@@ -89,52 +89,44 @@
         </a>
       </div>      
     </div>
-    <div>
+    <div class="w-2/5 relative h-full">
+      <!-- SVG -->
       <svg
         id="animated-svg"
         xmlns="http://www.w3.org/2000/svg"
-        width="800"
-        height="500"
+        class="w-full h-full"
         viewBox="0 0 400 250"
+        preserveAspectRatio="xMidYMid meet"
       >
         <!-- Full Background -->
-        <rect x="0" y="0" width="400" height="250" fill="#FFFFFF" rx="10"/>
-
+        <rect x="0" y="0" width="400" height="250" fill="#FFFFFF" rx="10" />
         <!-- Header -->
         <rect x="0" y="0" width="400" height="40" fill="#3B974E" rx="10" />
-
         <rect x="20" y="60" width="80" height="40" fill="#3B974E" rx="10" />
         <rect x="20" y="120" width="80" height="40" fill="#73F190" rx="10" />
         <rect x="20" y="180" width="80" height="40" fill="#3B974E" rx="10" />
-
         <!-- Right Text Area -->
         <g>
           <rect x="120" y="60" width="260" height="40" rx="10" fill="#73F190" />
-          <rect x="130" y="67" width="100" height="6" rx="3" fill="#3B974E" class="line" />
-          <rect x="130" y="77" width="150" height="6" rx="3" fill="#3B974E" class="line" />
-          <rect x="130" y="87" width="175" height="6" rx="3" fill="#3B974E" class="line" />
+          <rect x="130" y="67" width="100" height="6" rx="3" fill="#3B974E" />
+          <rect x="130" y="77" width="150" height="6" rx="3" fill="#3B974E" />
+          <rect x="130" y="87" width="175" height="6" rx="3" fill="#3B974E" />
         </g>
-
         <!-- Bar Chart -->
         <g>
           <rect x="120" y="120" width="260" height="100" fill="#1E1E22" rx="10" />
-          <rect x="140" y="170" width="10" height="30" fill="#73F190" rx="2" class="bar" />
-          <rect x="152" y="160" width="10" height="40" fill="#3B974E" rx="2" class="bar" />
-
-          <rect x="170" y="155" width="10" height="45" fill="#73F190" rx="2" class="bar" />
-          <rect x="182" y="165" width="10" height="35" fill="#3B974E" rx="2" class="bar" />
-
-          <rect x="200" y="160" width="10" height="40" fill="#73F190" rx="2" class="bar" />
-          <rect x="212" y="150" width="10" height="50" fill="#3B974E" rx="2" class="bar" />
-
-          <rect x="230" y="165" width="10" height="35" fill="#73F190" rx="2" class="bar" />
-          <rect x="242" y="180" width="10" height="20" fill="#3B974E" rx="2" class="bar" />
-
-          <rect x="260" y="190" width="10" height="10" fill="#73F190" rx="2" class="bar" />
-          <rect x="272" y="170" width="10" height="30" fill="#3B974E" rx="2" class="bar" />
-
-          <rect x="290" y="150" width="10" height="50" fill="#73F190" rx="2" class="bar" />
-          <rect x="302" y="155" width="10" height="45" fill="#3B974E" rx="2" class="bar" />
+          <rect x="140" y="170" width="10" height="30" fill="#73F190" rx="2" />
+          <rect x="152" y="160" width="10" height="40" fill="#3B974E" rx="2" />
+          <rect x="170" y="155" width="10" height="45" fill="#73F190" rx="2" />
+          <rect x="182" y="165" width="10" height="35" fill="#3B974E" rx="2" />
+          <rect x="200" y="160" width="10" height="40" fill="#73F190" rx="2" />
+          <rect x="212" y="150" width="10" height="50" fill="#3B974E" rx="2" />
+          <rect x="230" y="165" width="10" height="35" fill="#73F190" rx="2" />
+          <rect x="242" y="180" width="10" height="20" fill="#3B974E" rx="2" />
+          <rect x="260" y="190" width="10" height="10" fill="#73F190" rx="2" />
+          <rect x="272" y="170" width="10" height="30" fill="#3B974E" rx="2" />
+          <rect x="290" y="150" width="10" height="50" fill="#73F190" rx="2" />
+          <rect x="302" y="155" width="10" height="45" fill="#3B974E" rx="2" />
         </g>
       </svg>
     </div>
@@ -144,46 +136,53 @@
       document.getElementById("animated-svg").classList.add("animate");
     });
   </script>
-<!-- About Us Section -->
-<section id="our-process" class="h-[1800px] px-12 py-12">
-  <h2 class="text-4xl font-bold mb-8 text-center">How it works</h2>
+
+<section id="why-us" class="bg-[#1e1e22] py-20 px-8">
+  <!-- Section Title -->
+  <h2 class="text-4xl font-bold text-center text-transparent bg-gradient-to-r from-[#dce35b] to-[#73F190] bg-clip-text mb-16">
+    Why Prism Dashboards?
+  </h2>
   
-  <!-- About Us Content -->
-  <div class="grid grid-cols-2 gap-8 items-start">
-    <!-- Left Side Text -->
-    <div class="space-y-12">
-      <div>
-        <h3 class="text-2xl font-semibold">Step 1: Initial Consultation</h3>
-        <p>There are many dashboard companies out there. They are either expensive or made without character. 
-          At the end of the day a good dashboard will convey a story that sometimes is overlooked.
-          Although, in with current companies it is often a hurdle to get your foot into the dashboard scene. For 
-          that reason we offer free consultations so we can construct the best narrative for your company.
-        </p>
+
+  <!-- Grid Layout -->
+  <div class="grid grid-cols-2 gap-16 items-center">
+    <!-- Row 1 -->
+    <div class="col-span-2 flex flex-col items-center space-y-8">
+      <div class="text-6xl font-bold text-center text-gray-300">
+        <p>Streamline your workflow,</p>
+        <p>simplify your data.</p>
       </div>
-      <div>
-        <h3 class="text-2xl font-semibold">Step 2: Securely Collect/Organize Your Data</h3>
-        <p>Data sometimes isn't pretty.
-          Yet, we treat all data as if was our own. Weather it's in a database, csv, or excel sheet. We will take care 
-          of your information and securely prepare it in house.
-        </p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold">Step 3: Transform From Data to Interactive Dashboards</h3>
-        <p>Our team works with yours to design intuitive dashboards, bringing your metrics to life with clear insights.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold">Step 4: Take Control of Your Data</h3>
-        <p>Once your dashboard is ready, it’s all yours! Access it anywhere, share it with your team, and make data-driven decisions confidently.</p>
+      <div class="text-lg text-gray-400 text-center max-w-xl">
+        <p>Consolidate all your databases, Excel sheets, and CSV files to a single point. Automatically sync incoming data without lifting a finger.</p>
       </div>
     </div>
 
-    <!-- Right Side for Images -->
-    <div>
-      <!-- Placeholder for images -->
-      <div class="h-full bg-gray-300 text-center flex items-center justify-center text-xl text-gray-600">Images Here</div>
+    <!-- Row 2 -->
+    <div class="flex justify-center">
+      <div class="text-6xl font-bold text-center text-gray-300">
+        <p>Give us the data,</p>
+        <p>we'll do the rest.</p>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="text-lg text-gray-400 text-center max-w-md">
+        <p>Data comes in all shapes and sizes, but at the end of the day, security and privacy are our main focus.</p>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="flex justify-center">
+      <div class="text-6xl font-bold text-center text-gray-300">
+        <p>Infinite customization.</p>
+        <p>Your metrics tell a story.</p>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="w-[300px] h-[200px] bg-gray-700 rounded-lg shadow-lg"></div>
     </div>
   </div>
 </section>
+
 
 <!-- Dashboard Examples Section -->
 <section id="examples" class="h-[900px] px-12 py-12">
@@ -226,6 +225,42 @@
   </ul>
 </section>
 
+<!-- FAQ Us Section -->
+<section id="faq" class="h-[900px] px-12 py-12">
+  <h2 class="text-4xl font-bold mb-8 text-center">Can't wait? We neither.</h2>
+    <div class="flex justify-between">
+      <form id="contact-form" class="space-y-6">
+        <input id="email" type="email" name="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <input id="name" type="text" name="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <input id="company" type="text" name="company" placeholder="Company" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <textarea id="projectDetails" name="projectDetails" placeholder="Tell us about your project!" class="w-full h-32 px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required></textarea>
+        <button type="submit" class="px-6 py-2 rounded-lg" style="background-color: #73F190; color: #1E1E22;">Submit</button>
+    </form>
+    <div class="text-lg">
+      <p>We are really excited to show you what we're capable of. Leave us some general information and we will be in touch!</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact" class="h-[900px] px-12 py-12">
+  <h2 class="text-4xl font-bold mb-8 text-center">Can't wait? We neither.</h2>
+    <div class="flex justify-between">
+      <form id="contact-form" class="space-y-6">
+        <input id="email" type="email" name="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <input id="name" type="text" name="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <input id="company" type="text" name="company" placeholder="Company" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
+        <textarea id="projectDetails" name="projectDetails" placeholder="Tell us about your project!" class="w-full h-32 px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required></textarea>
+        <button type="submit" class="px-6 py-2 rounded-lg" style="background-color: #73F190; color: #1E1E22;">Submit</button>
+    </form>
+    <div class="text-lg">
+      <p>We are really excited to show you what we're capable of. Leave us some general information and we will be in touch!</p>
+    </div>
+  </div>
+</section>
+
+
 <script>
   function toggleDropdown(event) {
     // Close any currently open dropdowns
@@ -240,45 +275,6 @@
     dropdown.classList.toggle("hidden");
   }
 </script>
-
-
-<!-- Contact Us Section -->
-<section id="contact" class="h-[900px] px-12 py-12">
-  <h2 class="text-4xl font-bold mb-8 text-center">Contact Us!</h2>
-    <div class="flex justify-between">
-      <form id="contact-form" class="space-y-6">
-        <input id="email" type="email" name="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
-        <input id="name" type="text" name="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
-        <input id="company" type="text" name="company" placeholder="Company" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
-        <textarea id="projectDetails" name="projectDetails" placeholder="Tell us about your project!" class="w-full h-32 px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required></textarea>
-        <button type="submit" class="px-6 py-2 rounded-lg" style="background-color: #73F190; color: #1E1E22;">Submit</button>
-    </form>
-    <div class="text-lg">
-      <p>At Prism Dashboards, we recognize each business has its own unique set of needs. The more information you share with us, the better we can cater to your needs!</p>
-    </div>
-  </div>
-
-  <!-- Meet the Founders Section -->
-  <h2 class="text-4xl font-bold mb-8 text-center mt-16">Meet the Team</h2>
-  
-  <div class="grid grid-cols-4 gap-8 items-start">
-    <!-- Section 1: Image -->
-    <div src="assets/images/logo-white.png" alt="Prism Dashboards Logo" class="h-12 mr-2"></div>
-    
-    <!-- Section 2: Description -->
-    <div class="text-center">
-      <p class="text-xl">Description</p>
-    </div>
-    
-    <!-- Section 3: Image -->
-    <div class="bg-gray-300 text-center flex items-center justify-center text-xl text-gray-600 h-48">Image</div>
-    
-    <!-- Section 4: Description -->
-    <div class="text-center">
-      <p class="text-xl">Description</p>
-    </div>
-  </div>
-</section>
 
 <script>
   document.querySelectorAll('nav a, a[href^="#"]').forEach(anchor => {
