@@ -7,6 +7,28 @@
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      max-width: 900px; /* Define a max width for proper centering */
+      height: 370px;
+      overflow: hidden;
+    }
+    .item {
+      position: absolute;
+      text-align: justify;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      transition: 0.5s;
+    }
+
+
     .rotating-words {
       position: relative;
       animation-name: bounce;
@@ -142,14 +164,11 @@
   <h2 class="text-2xl font-bold text-center text-transparent bg-gradient-to-r from-[#dce35b] to-[#73F190] bg-clip-text mb-16">
     Why Prism Dashboards?
   </h2>
-  
-
-  <!-- Grid Layout -->
   <div class="grid grid-cols-2 gap-16 items-center">
     <!-- Row 1 -->
     <div class="col-span-2 flex flex-col items-center space-y-8">
       <div>
-        <p class="text-4xl font-bold text-center text-white">Streamline your workflow,</p>
+        <p class="text-4xl font-bold text-center text-white">Streamline your presentations,</p>
         <p class="text-4xl font-bold text-center text-white">simplify your data.</p>
       </div>
       <div class="text-lg text-gray-200 text-center max-w-xl">
@@ -158,33 +177,91 @@
     </div>
 
     <!-- Row 2 -->
-    <div class="flex justify-center">
-      <div >
-        <p class="text-4xl font-bold text-white">Give us the data,</p>
-        <p class="text-4xl font-bold text-white">we'll do the rest.</p>
-        <p>Data comes in all shapes and sizes, but at the end of the day, security and privacy are our main focus. You give us your vision and we'll create it.</p>
+    <div class="flex justify-center items-center">
+      <div class="max-w-md px-4 text-center">
+        <p class="text-4xl font-bold text-white">Infinite customization.</p>
+        <p class="text-slate-200 leading-relaxed">Your metrics tell a story. They provide key insight on the ideas of your company. We build our dashboards from the ground up, so you know exactly how your data is presented. </p>
       </div>
     </div>
     <div class="flex justify-center">
-      <div class="text-lg text-gray-400 text-center max-w-md">
-        image
+      <div class="relative mt-24 w-full max-w-5xl h-[370px] overflow-hidden slider">
+        <!-- Slide Items -->
+        <div class="item absolute transition-all duration-500 left-[calc(50%-110px)] top-0">
+          <svg
+          id="animated-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-full h-full"
+          viewBox="0 0 400 250"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <!-- Full Background -->
+          <rect x="0" y="0" width="400" height="250" fill="#FFFFFF" rx="10" />
+          <!-- Header -->
+          <rect x="0" y="0" width="400" height="40" fill="#3B974E" rx="10" />
+          <rect x="20" y="60" width="80" height="40" fill="#3B974E" rx="10" />
+          <rect x="20" y="120" width="80" height="40" fill="#73F190" rx="10" />
+          <rect x="20" y="180" width="80" height="40" fill="#3B974E" rx="10" />
+          <!-- Right Text Area -->
+          <g>
+            <rect x="120" y="60" width="260" height="40" rx="10" fill="#73F190" />
+            <rect x="130" y="67" width="100" height="6" rx="3" fill="#3B974E" />
+            <rect x="130" y="77" width="150" height="6" rx="3" fill="#3B974E" />
+            <rect x="130" y="87" width="175" height="6" rx="3" fill="#3B974E" />
+          </g>
+          <!-- Bar Chart -->
+          <g>
+            <rect x="120" y="120" width="260" height="100" fill="#1E1E22" rx="10" />
+            <rect x="140" y="170" width="10" height="30" fill="#73F190" rx="2" />
+            <rect x="152" y="160" width="10" height="40" fill="#3B974E" rx="2" />
+            <rect x="170" y="155" width="10" height="45" fill="#73F190" rx="2" />
+            <rect x="182" y="165" width="10" height="35" fill="#3B974E" rx="2" />
+            <rect x="200" y="160" width="10" height="40" fill="#73F190" rx="2" />
+            <rect x="212" y="150" width="10" height="50" fill="#3B974E" rx="2" />
+            <rect x="230" y="165" width="10" height="35" fill="#73F190" rx="2" />
+            <rect x="242" y="180" width="10" height="20" fill="#3B974E" rx="2" />
+            <rect x="260" y="190" width="10" height="10" fill="#73F190" rx="2" />
+            <rect x="272" y="170" width="10" height="30" fill="#3B974E" rx="2" />
+            <rect x="290" y="150" width="10" height="50" fill="#73F190" rx="2" />
+            <rect x="302" y="155" width="10" height="45" fill="#3B974E" rx="2" />
+          </g>
+        </svg>
+        </div>
+        <div class="item absolute w-[200px] h-[320px] text-justify bg-white rounded-lg p-5 shadow-lg transition-all duration-500">
+          <h1 class="text-2xl font-bold text-black mb-4">Slide 2</h1>
+          <p class="text-black">Laudantium voluptas ipsa similique magni adipisci accusamus consectetur fuga facilis doloremque dignissimos incidunt.</p>
+        </div>
+        <div class="item absolute w-[200px] h-[320px] text-justify bg-white rounded-lg p-5 shadow-lg transition-all duration-500">
+          <h1 class="text-2xl font-bold text-black mb-4">Slide 3</h1>
+          <p class="text-black">Distinctio saepe facilis cumque! Voluptate, cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="item absolute w-[200px] h-[320px] text-justify bg-white rounded-lg p-5 shadow-lg transition-all duration-500">
+          <h1 class="text-2xl font-bold text-black mb-4">Slide 4</h1>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo.</p>
+        </div>
+        <div class="item absolute w-[200px] h-[320px] text-justify bg-white rounded-lg p-5 shadow-lg transition-all duration-500">
+          <h1 class="text-2xl font-bold text-black mb-4">Slide 5</h1>
+          <p class="text-black">Laudantium voluptas ipsa similique magni adipisci accusamus consectetur fuga facilis doloremque dignissimos incidunt.</p>
+        </div>
+        <!-- Navigation Buttons -->
+        <button id="prev" class="absolute left-[50px] top-[40%] text-white text-5xl font-bold hover:text-green-400 transition-opacity duration-500 z-10">
+          &lt;
+        </button>
+        <button id="next" class="absolute right-[50px] top-[40%] text-white text-5xl font-bold hover:text-green-400 transition-opacity duration-500 z-10">
+          &gt;
+        </button>
       </div>
     </div>
 
     <!-- Row 3 -->
-    <div class="flex justify-center">
-      <div class="text-lg text-gray-400 text-center max-w-md">
-        image
-      </div>
+    <div class="flex justify-center items-center">
+    </div>    
+    <div class="max-w-md px-4 text-center">
+      <p class="text-4xl font-bold text-white">Give us the data,</p>
+      <p class="text-4xl font-bold text-white">we'll do the rest.</p>
+      <p class="text-slate-200 leading-relaxed">Data comes in all shapes and sizes, but at the end of the day, security and privacy are our main focus. You give us your vision and we'll create it.</p>
     </div>
-    <div class="flex justify-center">
-      <div >
-        <p class="text-4xl font-bold text-white">Infinite customization.</p>
-        <p>Your metrics tell a story.</p>
-      </div>
-    </div>
+  </div>
 </section>
-
 
 <!-- Dashboard Examples Section -->
 <section id="examples" class="h-[900px] px-12 py-12">
@@ -228,27 +305,91 @@
 </section>
 
 <!-- FAQ Us Section -->
-<section id="faq" class="h-[900px] px-12 py-12">
-  <h2 class="text-4xl font-bold mb-8 text-center">Can't wait? We neither.</h2>
-    <div class="flex justify-between">
-      <form id="contact-form" class="space-y-6">
-        <input id="email" type="email" name="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
-        <input id="name" type="text" name="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
-        <input id="company" type="text" name="company" placeholder="Company" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
-        <textarea id="projectDetails" name="projectDetails" placeholder="Tell us about your project!" class="w-full h-32 px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required></textarea>
-        <button type="submit" class="px-6 py-2 rounded-lg" style="background-color: #73F190; color: #1E1E22;">Submit</button>
-    </form>
-    <div class="text-lg">
-      <p>We are really excited to show you what we're capable of. Leave us some general information and we will be in touch!</p>
+<section id="faq" class="bg-gray-100 py-12 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Title -->
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Frequently Asked Questions</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Left Side Content -->
+      <div>
+        <p class="text-3xl font-semibold text-gray-800">Got questions?</p>
+        <p class="text-3xl font-semibold text-gray-800">We have answers.</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div>
+        <div class="divide-y divide-gray-300">
+          <!-- FAQ Item 1 -->
+          <div>
+            <button
+              class="flex justify-between w-full text-lg font-medium text-gray-800 py-4 focus:outline-none"
+              onclick="toggleFAQ('faq1')"
+            >
+              <span>Q1</span>
+              <span id="faq1-icon">+</span>
+            </button>
+            <div id="faq1-content" class="hidden bg-gray-200 p-4 text-sm text-gray-700">
+              A1
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div>
+            <button
+              class="flex justify-between w-full text-lg font-medium text-gray-800 py-4 focus:outline-none"
+              onclick="toggleFAQ('faq2')"
+            >
+              <span>Q2</span>
+              <span id="faq2-icon">+</span>
+            </button>
+            <div id="faq2-content" class="hidden bg-gray-200 p-4 text-sm text-gray-700">
+              A2
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div>
+            <button
+              class="flex justify-between w-full text-lg font-medium text-gray-800 py-4 focus:outline-none"
+              onclick="toggleFAQ('faq3')"
+            >
+              <span>Q3</span>
+              <span id="faq3-icon">+</span>
+            </button>
+            <div id="faq3-content" class="hidden bg-gray-200 p-4 text-sm text-gray-700">
+              A3
+            </div>
+          </div>
+
+          <!-- Add more FAQ items as needed -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // JavaScript for toggling FAQ items
+  function toggleFAQ(id) {
+    const content = document.getElementById(`${id}-content`);
+    const icon = document.getElementById(`${id}-icon`);
+
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+      icon.textContent = "×"; // Change icon to close
+    } else {
+      content.classList.add("hidden");
+      icon.textContent = "+"; // Change icon back to plus
+    }
+  }
+</script>
 
 
 <!-- Contact Us Section -->
 <section id="contact" class="h-[900px] px-12 py-12">
-  <h2 class="text-4xl font-bold mb-8 text-center">Can't wait? We neither.</h2>
-    <div class="flex justify-between">
+  <h2 class="text-4xl font-bold mb-8 text-center">Can't wait? Us too!</h2>
+    <div class="flex justify-between space-x-12">
       <form id="contact-form" class="space-y-6">
         <input id="email" type="email" name="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
         <input id="name" type="text" name="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg" style="background-color: #2A2626; color: #FFFFFF;" required>
@@ -262,6 +403,56 @@
   </div>
 </section>
 
+<script>
+  // JavaScript for Carousel Functionality
+  let items = document.querySelectorAll('.slider .item');
+  let active = 2; // Set the initially active slide (0-indexed)
+
+  function loadShow() {
+  const sliderWidth = document.querySelector('.slider').offsetWidth;
+
+  items.forEach((item, index) => {
+    // Reset styles for all items
+    item.style.transition = "0.5s";
+    item.style.opacity = 0;
+    item.style.transform = "scale(0.8) translateX(0)";
+    item.style.zIndex = -1;
+
+    if (index === active) {
+      // Center the active slide
+      item.style.transform = "translateX(0) scale(1)";
+      item.style.zIndex = 1;
+      item.style.opacity = 1;
+    } else if (index < active) {
+      // Position slides to the left of the active slide
+      const offset = active - index;
+      item.style.transform = `translateX(-${sliderWidth / 3 * offset}px) scale(${1 - 0.2 * offset})`;
+      item.style.opacity = offset > 2 ? 0 : 0.6;
+    } else if (index > active) {
+      // Position slides to the right of the active slide
+      const offset = index - active;
+      item.style.transform = `translateX(${sliderWidth / 3 * offset}px) scale(${1 - 0.2 * offset})`;
+      item.style.opacity = offset > 2 ? 0 : 0.6;
+    }
+  });
+}
+
+  loadShow();
+
+  // Navigation Controls
+  let next = document.getElementById('next');
+  let prev = document.getElementById('prev');
+
+  next.onclick = function () {
+    active = active + 1 < items.length ? active + 1 : active;
+    loadShow();
+  };
+
+  prev.onclick = function () {
+    active = active - 1 >= 0 ? active - 1 : active;
+    loadShow();
+  };
+</script>
 
 <script>
   function toggleDropdown(event) {
@@ -341,6 +532,6 @@
     console.log(index)
     }, 2000); // 50% of 6s animation = 3000ms
   });
-  </script>
+</script>
 </body>
 </html>
