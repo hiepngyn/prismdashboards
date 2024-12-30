@@ -90,7 +90,6 @@
     <div class="flex space-x-6 font-bold">
       <a href="#why-us" class="hover:text-green-400">Why Us?</a>
       <a href="#examples" class="hover:text-green-400">Products</a>
-      <a href="#faq" class="hover:text-green-400">FAQ</a>
       <a href="#contact" class="hover:text-green-400">Contact</a>
     </div>
   </nav>
@@ -103,7 +102,7 @@
         <div id="rotating-words" class="rotating-words">intuative dashboards.</div>
       </h1>
       <div class="flex space-x-4">
-        <a href="#about" class="hover:text-green-400">
+        <a href="#why-us" class="hover:text-green-400">
           <button class="px-6 py-2 rounded-lg font-bold" style="background-color: #73F190; color: #1E1E22;">Learn more</button>
         </a>
         <a href="#contact" class="hover:text-green-400">
@@ -265,125 +264,66 @@
 
 <!-- Dashboard Examples Section -->
 <section id="examples" class="h-[900px] px-12 py-12">
-  <h2 class="text-4xl font-bold mb-8 text-center">Business Dashboard Examples</h2>
-  <ul class="space-y-4">
-    <li class="relative">
-      <div class="flex items-center space-x-2">
-        <span>Financial Dashboards</span>
-        <button class="toggle-btn flex items-center" onclick="toggleDropdown(event)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="dropdown-content hidden text-gray-300 ml-6">Test</div>
-    </li>
-    <li class="relative">
-      <div class="flex items-center space-x-2">
-        <span>Project Management Dashboards</span>
-        <button class="toggle-btn flex items-center" onclick="toggleDropdown(event)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="dropdown-content hidden text-gray-300 ml-6">Test</div>
-    </li>
-    <li class="relative">
-      <div class="flex items-center space-x-2">
-        <span>Marketing Dashboards</span>
-        <button class="toggle-btn flex items-center" onclick="toggleDropdown(event)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="dropdown-content hidden text-gray-300 ml-6">Test</div>
-    </li>
-    <!-- Add other list items similarly -->
-  </ul>
-</section>
+  <!-- Header -->
+  <div class="mb-12 max-w-md px-4 text-center">
+    <h2 class="text-4xl font-bold text-white">Take a look at our example dashboards</h2>
+    <p class="text-slate-200 leading-relaxed">These are just examples! We will custom make your dashboard to your preferences!</p>
+  </div>
 
-<!-- FAQ Us Section -->
-<section id="faq" class="bg-gray-100 py-12 px-6">
-  <div class="max-w-6xl mx-auto">
-    <!-- Section Title -->
-    <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Frequently Asked Questions</h2>
+  <!-- Buttons and Content -->
+  <div class="flex items-start space-x-8">
+    <!-- Buttons -->
+    <div id="buttonGroup" class="flex flex-wrap gap-4 max-w-xs">
+      <button id="btn1" onclick="changeContent('image1', 'btn1')" class="px-4 py-2 border border-gray-400 text-white font-semibold rounded-lg hover:border-green-500 hover:text-green-500">
+        Financial Dashboards
+      </button>
+      <button id="btn2" onclick="changeContent('image2', 'btn2')" class="px-4 py-2 border border-gray-400 text-white font-semibold rounded-lg hover:border-green-500 hover:text-green-500">
+        Project Management Dashboards
+      </button>
+      <button id="btn3" onclick="changeContent('image3', 'btn3')" class="px-4 py-2 border border-gray-400 text-white font-semibold rounded-lg hover:border-green-500 hover:text-green-500">
+        Marketing Dashboards
+      </button>
+      <button id="btn4" onclick="changeContent('image4', 'btn4')" class="px-4 py-2 border border-gray-400 text-white0 font-semibold rounded-lg hover:border-green-500 hover:text-green-500">
+        Sales Dashboards
+      </button>
+      <button id="btn5" onclick="changeContent('image5', 'btn5')" class="px-4 py-2 border border-gray-400 text-white font-semibold rounded-lg hover:border-green-500 hover:text-green-500">
+        Inventory Dashboards
+      </button>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Left Side Content -->
-      <div>
-        <p class="text-3xl font-semibold text-gray-800">Got questions?</p>
-        <p class="text-3xl font-semibold text-gray-800">We have answers.</p>
-      </div>
-
-      <!-- FAQ Accordion -->
-      <div>
-        <div class="divide-y divide-gray-300">
-          <!-- FAQ Item 1 -->
-          <div>
-            <button
-              class="flex justify-between w-full text-lg font-medium text-gray-800 py-4 focus:outline-none"
-              onclick="toggleFAQ('faq1')"
-            >
-              <span>Q1</span>
-              <span id="faq1-icon">+</span>
-            </button>
-            <div id="faq1-content" class="hidden bg-gray-200 p-4 text-sm text-gray-700">
-              A1
-            </div>
-          </div>
-
-          <!-- FAQ Item 2 -->
-          <div>
-            <button
-              class="flex justify-between w-full text-lg font-medium text-gray-800 py-4 focus:outline-none"
-              onclick="toggleFAQ('faq2')"
-            >
-              <span>Q2</span>
-              <span id="faq2-icon">+</span>
-            </button>
-            <div id="faq2-content" class="hidden bg-gray-200 p-4 text-sm text-gray-700">
-              A2
-            </div>
-          </div>
-
-          <!-- FAQ Item 3 -->
-          <div>
-            <button
-              class="flex justify-between w-full text-lg font-medium text-gray-800 py-4 focus:outline-none"
-              onclick="toggleFAQ('faq3')"
-            >
-              <span>Q3</span>
-              <span id="faq3-icon">+</span>
-            </button>
-            <div id="faq3-content" class="hidden bg-gray-200 p-4 text-sm text-gray-700">
-              A3
-            </div>
-          </div>
-
-          <!-- Add more FAQ items as needed -->
-        </div>
-      </div>
+    <!-- Dynamic Content Area -->
+    <div class="flex-grow bg-white shadow-lg rounded-lg p-6">
+      <p id="content" class="text-center text-gray-700 font-medium">image1</p>
     </div>
   </div>
 </section>
 
 <script>
-  // JavaScript for toggling FAQ items
-  function toggleFAQ(id) {
-    const content = document.getElementById(`${id}-content`);
-    const icon = document.getElementById(`${id}-icon`);
+  // Initialize the first button as active
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstButton = document.getElementById('btn1');
+    firstButton.classList.add('bg-green-500', 'text-white');
+    changeContent('image1', 'btn1');
+  });
 
-    if (content.classList.contains("hidden")) {
-      content.classList.remove("hidden");
-      icon.textContent = "×"; // Change icon to close
-    } else {
-      content.classList.add("hidden");
-      icon.textContent = "+"; // Change icon back to plus
-    }
+  function changeContent(content, activeButtonId) {
+    const contentDiv = document.getElementById('content');
+    contentDiv.textContent = content;
+
+    // Reset button styles
+    const buttons = document.querySelectorAll('#buttonGroup button');
+    buttons.forEach(button => {
+      button.classList.remove('bg-green-500', 'text-white');
+      button.classList.add('border-gray-400', 'text-white');
+    });
+
+    // Set the active button's style
+    const activeButton = document.getElementById(activeButtonId);
+    activeButton.classList.remove('border-gray-400', 'text-white');
+    activeButton.classList.add('bg-green-500', 'text-white');
   }
 </script>
+
 
 
 <!-- Contact Us Section -->
@@ -403,6 +343,23 @@
   </div>
 </section>
 
+<footer class="bg-[#242224] text-white px-12 py-6">
+  <div class="flex justify-between items-center">
+    <!-- Left Side -->
+    <div>
+      <p class="text-gray-600 text-sm">© 2024 Prism Dashboards. All rights reserved.</p>
+      <p class="text-gray-600 text-sm">Based in Kansas, United States</p>
+    </div>
+    
+    <!-- Right Side -->
+    <div>
+      <a href="/privacy-policy" class="text-sm hover:text-green-400 transition duration-200 text-gray-600">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--Carousel-->
 <script>
   // JavaScript for Carousel Functionality
   let items = document.querySelectorAll('.slider .item');
@@ -454,21 +411,7 @@
   };
 </script>
 
-<script>
-  function toggleDropdown(event) {
-    // Close any currently open dropdowns
-    document.querySelectorAll(".dropdown-content").forEach(content => {
-      if (!content.classList.contains("hidden")) {
-        content.classList.add("hidden");
-      }
-    });
-
-    // Open the clicked dropdown
-    const dropdown = event.target.closest("button").parentElement.nextElementSibling;
-    dropdown.classList.toggle("hidden");
-  }
-</script>
-
+<!--Auto scroll-->
 <script>
   document.querySelectorAll('nav a, a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -489,6 +432,7 @@
   });
 </script>
 
+<!--Contact us form submission-->
 <script>
   document.getElementById("contact-form").addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -519,6 +463,7 @@
   });
 </script>
 
+<!--Rotating words script-->
 <script>
   const textDiv = document.getElementById("rotating-words");
   const texts = ["captivating visuals.", "clear solutions.", "dynamic reports.", "empwering tools.", "captivating ideas."];
